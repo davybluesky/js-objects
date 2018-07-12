@@ -13,8 +13,14 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
     
     Console.log the object.
 */
-    
-  
+
+var books= {
+    title: "the obstacle is the way",
+    author: "ryan holiday",
+    category: " self help",
+    pages:200
+}
+  console. log(books);
 /*
 2.  Declare a variable named `dog` and create the following properties (key-value pairs) to the object:
    
@@ -30,9 +36,18 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
  "My dog `name` is `age` year old and likes to `speak` at strangers."
 */ 
 
+ var dog = {
+     name: 'chuck',
+     age: 12,
+     vegeterian: false,
+     color: 'blue',
+     speak: "BARK"
+ }
+
+ console.log("my dog " + dog.name + " is " + dog.age + " and likes to " + dog.speak + " at strangers");
 
 
-//An empty object
+ //An empty object
 
 /*
 3. Declare a variable named `kicks` and assign it to an EMPTY object.
@@ -46,9 +61,20 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
             
   Console.log the object.
 */
+var kicks = {};
+kicks.brand = "nike";
+kicks.color = "cornflower blue";
+kicks.size = 10;
+kicks.price = 100;
+kicks.buy = function(){
+  return "Now I is a cool kid!";
+}
+
+console.log(kicks);
+    
+ /* 
 
 
-/* 
 
 4. Declare a variable named `plainBox` and set its value to be an EMPTY object.
    Next, you will add three properties to this object. 
@@ -60,6 +86,13 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
 */
 
 
+var plainBox = {};
+plainBox.color= 'blue';
+plainBox.size= 12;
+plainBox.contents=[];
+
+console. log(plainBox);
+
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
             - add a key named `model` and set its value to the name of an American car manufacturer.
@@ -70,6 +103,15 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
 
     console.log the object
 */
+
+var stockCar={
+    model: 'ford',
+    year: '2010',
+    autoTRans: true,
+    driver: null,
+    passengers: [],
+}
+console.log(stockCar);
 
 
 /*
@@ -89,8 +131,22 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
    the value at `name`, and just the value at `age`.
  */
 
+var plainPerson= {}
 
-/*
+function buildPerson( person, namestring, age){
+    person.name = namestring;
+    person.age = age;
+    
+    return person
+}
+
+
+
+var completePerson = buildPerson(plainPerson, "hy-lee", 1000);
+console.log(completePerson);
+
+
+/*\
 7. Display values of objects that are inside an array
    Declare a new variable named `arrayOfObjects` and set it to be [this array of objects
    (https://gist.github.com/sgnl/958adf99007329d2e4ff).
